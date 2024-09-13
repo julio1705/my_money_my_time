@@ -23,7 +23,7 @@ export const App = () => {
   return (
 
     <View style={styles.section}>
-      <Text id='title' style={styles.appTitleText}> Welcome Mobile 👋 </Text>
+      <Text style={styles.appTitleText}> Welcome Mobile 👋 </Text>
       <Text style={styles.appTitleText}> {data.message} 🎉 </Text>
     </View>
 
