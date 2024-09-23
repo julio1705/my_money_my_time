@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@react-native-picker/picker": "^2.8.1",
     "@react-native/metro-config": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
+    "metro-config": "*",
     "react": "*",
     "react-native": "*",
-    "react-native-svg": "*",
-    "metro-config": "*"
+    "react-native-svg": "*"
   }
 }

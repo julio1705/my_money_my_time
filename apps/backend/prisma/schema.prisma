@@ -7,15 +7,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Transitions {
+model Transactions {
   id             Int          @id @default(autoincrement())
-  typeTransition TypeTransition
+  typeTransaction TypeTransaction
   value          Float
   dateTime       DateTime      @default(now())
   description    String?       @db.VarChar(150)
 }
 
-enum TypeTransition {
+enum TypeTransaction {
   outflow
   inflow
 }
