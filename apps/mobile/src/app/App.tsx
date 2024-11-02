@@ -10,7 +10,7 @@ export const App = () => {
   const [value, setValue] = useState('');
   const [editingTransaction, setEditingTransaction] = useState(null);
 
-  const url = 'http://10.0.2.2:3000'
+  const url = 'http://10.0.0.96:3000' //10.0.2.2:3000
 
   useEffect(() => {
     getTransactions();
@@ -109,6 +109,13 @@ export const App = () => {
     setEditingTransaction(null);
   };
 
+  const handleTypeTransaction = (typeTransaction) => {
+    return {
+      style: typeTransaction === 'inflow' ? { color: '#0000FF' } : { color: '#FF0000' },
+      icon: typeTransaction === 'inflow' ? '+' : '-'
+    }
+  }
+
   return (
 
     <SafeAreaView style={{ flex: 1 }}>
@@ -159,8 +166,8 @@ export const App = () => {
           {transactions.map(transaction => (
             <View key={transaction.id} style={styles.controlTranaction}>
               <TouchableOpacity onPress={() => handleEdit(transaction)}>
-                <Text>{transaction.description}</Text>
-                <Text>{transaction.typeTransaction === 'inflow' ? '+' : '-'} R$ {transaction.value.toFixed(2)}</Text>
+                <Text style={handleTypeTransaction(transaction.typeTransaction).style}>{transaction.description}</Text>
+                <Text style={handleTypeTransaction(transaction.typeTransaction).style}>{handleTypeTransaction(transaction.typeTransaction).icon} R$ {transaction.value.toFixed(2)}</Text>
               </TouchableOpacity>
               <Button title="Excluir" color="#B22222" onPress={() => deleteTransaction(transaction.id)} />
             </View>
