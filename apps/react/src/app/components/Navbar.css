@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    background-color: blue;
+    color: whitesmoke;
+}
+
+#logo {
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: bold;
+}
+
+.links a:hover {
+    transition: 0.5s;
+    color: black    
+}
+
+.links a {
+    text-decoration: none;
+    color: bisque;
+}

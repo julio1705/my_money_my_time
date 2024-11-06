@@ -1,0 +1,33 @@
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: blue;
+    margin-top: 2.5rem;
+}
+
+.title h1 {
+    font-weight: bold;
+    font-family: 'Helvetica';
+    border-left: 7px solid blue;
+    padding-left: 6px;
+    padding-top: 6px;
+    font-size: 1.8rem;
+}
+
+.title input {
+    font-weight: bold;
+    color: white;
+    margin-top: 0.5em;
+    padding: 0.5em 1.2em;
+    font-size: .9em;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.title input:hover {
+    transition: 0.5s;
+    background-color: #333;
+}

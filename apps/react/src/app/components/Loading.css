@@ -1,0 +1,13 @@
+.loading {
+    height: 30rem;
+    width: auto;
+    margin-top: 3rem;
+}
+
+.loading p {
+    font-size: 2rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;    
+    align-items: center;    
+}
