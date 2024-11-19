@@ -3,8 +3,8 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 1.5rem 4rem;
-    background-color: blue;
-    color: whitesmoke;
+    background-color: #0e1129;
+    color: #fff;
 }
 
 #logo {
@@ -19,10 +19,10 @@
 
 .links a:hover {
     transition: 0.5s;
-    color: black    
+    color: #2b3566
 }
 
 .links a {
     text-decoration: none;
-    color: bisque;
+    color: #fff;
 }

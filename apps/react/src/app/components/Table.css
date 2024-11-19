@@ -1,5 +1,5 @@
 table {
-    background-color: white;
+    background-color: #2b3566;
     margin: 3rem;
     padding: 1.5rem 0;
     border-radius: 10px;
@@ -19,6 +19,34 @@ td {
     width: 12rem;
     height: 2.5rem;
     text-align: center;
+    font-weight: bold;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: -8px;
+}
+
+td button {
+    font-weight: bold;
+    background-color: #922b21;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: .9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+td button:first-child {
+    background-color: #0e1129;
+}
+
+td button:hover {
+    opacity: 1;
 }
 
 th {
@@ -27,9 +55,9 @@ th {
 }
 
 .inflow {
-    color: green;
+    color: #008000;
 }
 
 .outflow {
-    color: red;
+    color: #FF0000;
 }

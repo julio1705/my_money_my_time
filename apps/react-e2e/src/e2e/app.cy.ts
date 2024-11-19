@@ -1,13 +1,9 @@
-import { getGreeting } from '../support/app.po';
-
 describe('react-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+  it('should display transactions table', () => {
+    cy.get('[href="/transactions"]').click();
+    cy.url().should('contain', '/transactions');
+    //cy.intercept('GET', 'http://localhost:3000/', { fixture: 'example.json' });
   });
 });

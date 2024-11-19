@@ -27,12 +27,12 @@ const Table = ({ data }: Props) => {
                 <th>Tipo</th>
                 <th>Ações</th>
             </tr>
-            {data.map(({ description, typeTransaction, value }) => (
-                <tr>
+            {data.map(({ id, description, typeTransaction, value }) => (
+                <tr key={id}>
                     <td className={typeTransaction}>{description}</td>
                     <td className={typeTransaction}>R$ {value.toFixed(2)}</td>
                     <td className={typeTransaction}>{dictionary[typeTransaction]}</td>
-                    <td>
+                    <td className='btn'>
                         <button>Editar</button>
                         <button>Excluir</button>
                     </td>

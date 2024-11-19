@@ -2,32 +2,31 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    color: blue;
+    color: #0C1C49;
     margin-top: 2.5rem;
 }
 
 .title h1 {
     font-weight: bold;
     font-family: 'Helvetica';
-    border-left: 7px solid blue;
-    padding-left: 6px;
-    padding-top: 6px;
-    font-size: 1.8rem;
+    color: #fff;
+    font-size: 2rem;
 }
 
 .title input {
     font-weight: bold;
-    color: white;
-    margin-top: 0.5em;
-    padding: 0.5em 1.2em;
+    color: #fff;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
     font-size: .9em;
-    border: 1px solid white;
+    border: none;
     border-radius: 5px;
-    background-color: blue;
+    background-color: #2b3566;
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .title input:hover {
-    transition: 0.5s;
-    background-color: #333;
+    transition: 0.3s;
+    opacity: 1;
 }
