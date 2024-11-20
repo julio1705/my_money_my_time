@@ -13,8 +13,8 @@ interface Props {
 }
 
 const dictionary: { [key: string]: string } = {
-    inflow: "Entrada",
-    outflow: "Saída"
+    income: "Entrada",
+    expense: "Saída"
 };
 
 const Table = ({ data }: Props) => {
@@ -24,14 +24,12 @@ const Table = ({ data }: Props) => {
             <tr>
                 <th>Descrição</th>
                 <th>Valor</th>
-                <th>Tipo</th>
                 <th>Ações</th>
             </tr>
             {data.map(({ id, description, typeTransaction, value }) => (
-                <tr key={id}>
-                    <td className={typeTransaction}>{description}</td>
+                <tr key={id} className='transaction-control'>
+                    <td>{description}</td>
                     <td className={typeTransaction}>R$ {value.toFixed(2)}</td>
-                    <td className={typeTransaction}>{dictionary[typeTransaction]}</td>
                     <td className='btn'>
                         <button>Editar</button>
                         <button>Excluir</button>

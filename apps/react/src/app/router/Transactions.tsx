@@ -14,7 +14,7 @@ interface DataItem {
 
 const Transactions = () => {
 
-    const url = 'http://127.0.0.1:3000/'
+    const url = 'http://127.0.0.1:3000/transactions'
 
     const [data, setData] = useState<DataItem[]>([]);
 

@@ -16,6 +16,6 @@ model Transactions {
 }
 
 enum TypeTransaction {
-  outflow
-  inflow
+  expense
+  income
 }

@@ -1,5 +1,5 @@
 table {
-    background-color: #2b3566;
+    background-color: #0e1129;
     margin: 3rem;
     padding: 1.5rem 0;
     border-radius: 10px;
@@ -10,15 +10,17 @@ table {
 
 tr {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 th,
 td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     width: 12rem;
     height: 2.5rem;
-    text-align: center;
     font-weight: bold;
 }
 
@@ -26,23 +28,18 @@ td {
     display: flex;
     justify-content: center;
     gap: .5rem;
-    margin-top: -8px;
 }
 
 td button {
     font-weight: bold;
-    background-color: #922b21;
+    background-color: #0e1129;
     color: #fff;
     padding: 0.5rem 1rem;
     font-size: .9em;
-    border: none;
+    border: #fff solid 1px;
     border-radius: 5px;
     cursor: pointer;
     opacity: 0.8;
-}
-
-td button:first-child {
-    background-color: #0e1129;
 }
 
 td button:hover {
@@ -54,10 +51,20 @@ th {
     text-transform: uppercase;
 }
 
-.inflow {
+.transaction-control{
+    text-align: center;
+}
+
+.transaction-control:hover {
+    transition: 0.5s;
+    background-color: #2b3566;
+    border-radius: 5px;
+}
+
+.income {
     color: #008000;
 }
 
-.outflow {
-    color: #FF0000;
+.expense {
+    color: #B22222;
 }

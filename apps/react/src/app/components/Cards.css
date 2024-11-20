@@ -1,7 +1,7 @@
 .container-cards {
     margin-top: 4rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .cards-control {

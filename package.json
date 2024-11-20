@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "api": "nx run backend:serve:development",
-    "react": "npx nx serve react"
+    "dev": "npx nx serve react"
   },
   "private": true,
   "devDependencies": {
