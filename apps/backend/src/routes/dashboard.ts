@@ -24,8 +24,8 @@ router.get('/', async (req, res) => {
     });
 
     const dashboardData = {
-      incomes: sumIncomes._sum.value,
-      expenses: sumExpenses._sum.value,
+      incomes: sumIncomes._sum.value.toFixed(2),
+      expenses: sumExpenses._sum.value.toFixed(2),
       remaining: (sumIncomes._sum.value - sumExpenses._sum.value).toFixed(2),
     };
 

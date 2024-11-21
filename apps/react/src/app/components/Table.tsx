@@ -12,11 +12,6 @@ interface Props {
     data: DataItem[];
 }
 
-const dictionary: { [key: string]: string } = {
-    income: "Entrada",
-    expense: "Saída"
-};
-
 const Table = ({ data }: Props) => {
 
     return (
