@@ -12,9 +12,9 @@ interface DataItem {
     dateTime: string
 }
 
-const Transactions = () => {
+const TransactionsListing = () => {
 
-    const url = 'http://127.0.0.1:3000/transactions'
+    const url = 'http://127.0.0.1:3000/api/transactions'
 
     const [data, setData] = useState<DataItem[]>([]);
 
@@ -35,10 +35,10 @@ const Transactions = () => {
 
     return (
         <div className="container-transactions">
-            <Title />
+            <Title title='Transações' returnOption={false} redirectLink='/transactions/create' />
             <Table data={data} />
         </div>
     )
 }
 
-export default Transactions
+export default TransactionsListing

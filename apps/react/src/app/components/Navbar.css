@@ -1,8 +1,8 @@
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 1.5rem 4rem;
+    justify-content: space-around;
+    padding: 2rem 0;
     background-color: #0e1129;
     color: #fff;
 }

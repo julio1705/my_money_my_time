@@ -13,8 +13,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/transactions', transactionsRoutes)
-app.use('/dashboard', dashboardRoutes)
+app.use('/api/transactions', transactionsRoutes)
+app.use('/api/dashboard', dashboardRoutes)
 
 app.listen(port, host, () => {
   console.log(`[ ready ] http://${host}:${port}`);

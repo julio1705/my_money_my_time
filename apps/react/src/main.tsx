@@ -5,7 +5,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './app/App';
 
 import Home from './app/router/Home';
-import Transactions from './app/router/Transactions';
+import TransactionsListing from './app/router/TransactionsListing';
+import TransactionsCreate from './app/router/TransactionsCreate';
+import TransactionsEdit from './app/router/TransactionsEdit';
 import Category from './app/router/Category';
 import ErrorPage from './app/router/ErrorPage';
 
@@ -21,12 +23,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/transactions',
-        element: <Transactions />,
+        element: <TransactionsListing />,
       },
       {
         path: '/transactions/create',
-        element: <p>Tela de criação</p>,
+        element: <TransactionsCreate />,
       },
+      {
+        path: '/transactions/edit/:id',
+        element: <TransactionsEdit />,
+      },      
       {
         path: '/category',
         element: <Category />
