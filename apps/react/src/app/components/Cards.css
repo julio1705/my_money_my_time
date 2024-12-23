@@ -29,10 +29,10 @@
     font-size: 20px;
 }
 
-.cards-control .card-value {
+#green{
     color: #008000;
 }
 
-#expenses {
+#red {
     color: #FF0000;
 }
