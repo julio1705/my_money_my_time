@@ -1,7 +1,8 @@
+import './FormTransactions.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Loading from './Loading'
 import { FormTransactionProps, TransactionProps } from '../types/transaction'
+import Loading from './Loading'
 const FormTransactions = ({ action, idParams, dataForm }: FormTransactionProps) => {
     const navigate = useNavigate()
     const [description, setDescription] = useState(dataForm.description)
@@ -18,7 +19,7 @@ const FormTransactions = ({ action, idParams, dataForm }: FormTransactionProps) 
         }
         switch (action) {
             case 'create':
-                saveTransaction(transaction)                
+                saveTransaction(transaction)
                 break
             case 'edit':
                 editTransaction(transaction)
@@ -43,12 +44,14 @@ const FormTransactions = ({ action, idParams, dataForm }: FormTransactionProps) 
     const editTransaction = async ({ description, value, typeTransaction }: TransactionProps) => {
         try {
             setIsLoading(true)
-            await fetch(`http://127.0.0.1:3000/api/transactions/${idParams}`, {
+            const response = await fetch(`http://127.0.0.1:3000/api/transactions/${idParams}`, {
                 method: 'PUT',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ description, value, typeTransaction })
             })
             setIsLoading(false)
+            const res = await response.json()
+            console.log(res)
             navigate('/transactions')
         }
         catch (err) {
@@ -57,41 +60,41 @@ const FormTransactions = ({ action, idParams, dataForm }: FormTransactionProps) 
     }
     if (isLoading) return <Loading />
     return (
-        <form>
-            <label>
-                <span>Descrição</span>
+        <div className='form-transaction'>
+            <form>
+                <label>Descrição</label>
                 <input
                     type="text"
                     id='description'
                     placeholder='Digite a descrição'
+                    required
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
-            </label>
-            <label>
-                <span>Valor</span>
+                <label>Valor</label>
                 <input
                     type="number"
                     id='value'
                     placeholder='Digite o valor'
+                    required
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                 />
-            </label>
-            <label>
-                <span>Tipo de transação</span>
+                <label>Tipo de transação</label>
                 <select
                     name="typeTransaction"
                     id="typeTransaction"
+                    required
                     value={typeTransaction}
                     onChange={(e) => setTypeTransaction(e.target.value)}
                 >
                     <option value="income">Entrada</option>
                     <option value="expense">Saída</option>
                 </select>
-            </label>
-            <input type="button" value='Salvar' onClick={handleTransaction} />
-        </form>
+                <button onClick={handleTransaction}>Salvar</button>
+
+            </form>
+        </div>
     )
 }
 export default FormTransactions

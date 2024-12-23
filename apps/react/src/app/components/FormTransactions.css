@@ -1,0 +1,42 @@
+.form-transaction {
+    margin-top: 2.5rem;
+}
+
+.form-transaction form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-transaction input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2b3566;
+    background-color: #0e1129;
+    color: #fff;
+}
+
+.form-transaction button {
+    margin-top: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2b3566;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.form-transaction button:hover {
+    transition: 0.3s;
+    opacity: 1;
+}
