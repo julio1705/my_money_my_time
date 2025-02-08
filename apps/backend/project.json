@@ -2,6 +2,7 @@
   "name": "backend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/backend/src",
+  "root": "apps/backend",
   "projectType": "application",
   "tags": [],
   "targets": {

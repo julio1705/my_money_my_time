@@ -1,9 +1,9 @@
 import './Cards.css'
 import { DashboardProps } from '../types/dashboard'
-const Cards = ({ incomes, expenses, remaining }: DashboardProps) => {
-    const remainingColor = (remaining: string) => {
-        const splitRemaining = remaining.split('')
-        const isNegative = splitRemaining[0] === '-'
+const Cards = ({ incomes, expenses, balance }: DashboardProps) => {
+    const balanceColor = (balance: string) => {
+        const splitBalance = balance.split('')
+        const isNegative = splitBalance[0] === '-'
         if (isNegative) return 'red'
         return 'green'
     }
@@ -19,7 +19,7 @@ const Cards = ({ incomes, expenses, remaining }: DashboardProps) => {
             </div>
             <div className="cards-control">
                 <div className="card-title">Saldo:</div>
-                <div className="card-value" id={remainingColor(remaining)}>R$ {remaining}</div>
+                <div className="card-value" id={balanceColor(balance)}>R$ {balance}</div>
             </div>
         </div>
     )
