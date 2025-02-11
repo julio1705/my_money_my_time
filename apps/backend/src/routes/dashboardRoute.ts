@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import { TransactionRepositoryPrisma } from '../database/transactionRepository';
+import { TransactionRepositoryPrisma } from '../database/transactionRepositoryPrisma';
+import { TransactionRepositoryFakerDB } from '../database/transactionRepositoryFakerDB';
 import { GetDashboardUseCase } from '../application/getDashboardUseCase';
 
 const router = Router();
-const transactionRepositoryPrisma = new TransactionRepositoryPrisma();
 const getDashboardUseCase = new GetDashboardUseCase(
-  transactionRepositoryPrisma
+  new TransactionRepositoryFakerDB()
 );
 
 router.get('/', async (req, res) => {

@@ -1,4 +1,4 @@
-import { TransactionRepository } from '../database/transactionRepository';
+import { TransactionRepository } from '../database/transactionRepositoryService';
 
 export class GetDashboardUseCase {
   transactionRepository: TransactionRepository;

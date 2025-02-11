@@ -1,4 +1,4 @@
-import { TransactionRepository } from '../database/transactionRepository';
+import { TransactionRepository } from '../database/transactionRepositoryService';
 import { TransactionType } from '../types/transactionType';
 
 export class TransactionsUseCase {

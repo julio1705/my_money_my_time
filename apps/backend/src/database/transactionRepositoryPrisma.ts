@@ -1,14 +1,6 @@
 import { PrismaClient } from '@prisma/client';
+import { TransactionRepository } from './transactionRepositoryService';
 import { TransactionType } from '../types/transactionType';
-
-export interface TransactionRepository {
-  calculateSumByTransactionType(typeTransaction: 'income' | 'expense'): Promise<number>;
-  getAllTransactions(): Promise<TransactionType[]>;
-  createTransaction(input: TransactionType): Promise<TransactionType>;
-  getTransaction(transaction_id: number): Promise<TransactionType>;
-  updateTransaction(transaction_id: number, input: TransactionType): Promise<TransactionType>;
-  deleteTransaction(transaction_id: number): Promise<TransactionType>;
-}
 
 export class TransactionRepositoryPrisma
   implements TransactionRepository {
@@ -32,6 +24,12 @@ export class TransactionRepositoryPrisma
     return await this.prisma.transactions.findMany();
   };
 
+  getTransaction = async (transaction_id: number) => {
+    return await this.prisma.transactions.findUnique({
+      where: { id: transaction_id },
+    });
+  }
+
   createTransaction = async (input: TransactionType) => {
     return await this.prisma.transactions.create({
       data: {
@@ -41,12 +39,6 @@ export class TransactionRepositoryPrisma
       },
     });
   };
-
-  getTransaction = async (transaction_id: number) => {
-    return await this.prisma.transactions.findUnique({
-      where: { id: transaction_id },
-    });
-  }
 
   updateTransaction = async (transaction_id: number, input: TransactionType) => {
     return await this.prisma.transactions.update({
