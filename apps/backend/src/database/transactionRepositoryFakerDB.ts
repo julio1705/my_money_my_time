@@ -9,14 +9,14 @@ export class TransactionRepositoryFakerDB
       typeTransaction: "income",
       value: 100,
       dateTime: "2025-01-26T21:51:50.720Z",
-      description: "Teste FakeDB"
+      description: "Teste FakerDB 01"
     },
     {
       id: 2,
       typeTransaction: "expense",
       value: 15,
       dateTime: "2025-01-26T21:51:50.720Z",
-      description: "Teste FakeDB 02"
+      description: "Teste FakerDB 02"
     }
   ]
 
@@ -58,7 +58,8 @@ export class TransactionRepositoryFakerDB
   }
 
   deleteTransaction = (transaction_id: number) => {
-    this.database.filter(data => data.id !== transaction_id)
+    const newDB = this.database.filter(data => data.id !== transaction_id)
+    this.database = newDB
   }
 
   getDateTime = () => {

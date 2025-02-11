@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { TransactionRepositoryPrisma } from '../database/transactionRepositoryPrisma';
+//import { TransactionRepositoryPrisma } from '../database/transactionRepositoryPrisma';
 import { TransactionRepositoryFakerDB } from '../database/transactionRepositoryFakerDB';
 import { TransactionsUseCase } from '../application/transactionsUseCase';
 
