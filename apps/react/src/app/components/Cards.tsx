@@ -1,26 +1,22 @@
 import './Cards.css'
-import { DashboardProps } from '../types/dashboard'
-const Cards = ({ incomes, expenses, balance }: DashboardProps) => {
-    const balanceColor = (balance: string) => {
-        const splitBalance = balance.split('')
+import { CardsProps } from '../types/dashboard'
+import Card from './Card'
+
+const Cards = ({ incomes, expenses, balance }: CardsProps) => {
+    
+    const balanceColor = (balance: number) => {
+        const balanceToString = balance.toString()
+        const splitBalance = balanceToString.split('')
         const isNegative = splitBalance[0] === '-'
         if (isNegative) return 'red'
         return 'green'
     }
+
     return (
         <div className="container-cards">
-            <div className="cards-control">
-                <div className="card-title">Entrada:</div>
-                <div className="card-value" id="green">R$ {incomes}</div>
-            </div>
-            <div className="cards-control">
-                <div className="card-title">Saída:</div>
-                <div className="card-value" id="red">R$ {expenses}</div>
-            </div>
-            <div className="cards-control">
-                <div className="card-title">Saldo:</div>
-                <div className="card-value" id={balanceColor(balance)}>R$ {balance}</div>
-            </div>
+            <Card title='Entrada:' value={incomes} color='green' />
+            <Card title='Saída:' value={expenses} color='red' />
+            <Card title='Saldo:' value={balance} color={balanceColor(balance)} />
         </div>
     )
 }

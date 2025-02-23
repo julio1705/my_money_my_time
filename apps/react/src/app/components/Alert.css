@@ -1,0 +1,9 @@
+.container-alert{
+    margin: 1rem auto;
+    padding-top: 3px;
+    text-align: center;
+    height: 2rem;
+    width: 40rem;
+    background-color: green;
+    border-radius: 4px;
+}

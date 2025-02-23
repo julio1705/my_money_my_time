@@ -1,38 +1,7 @@
 .container-cards {
-    margin-top: 4rem;
     display: flex;
     justify-content: space-evenly;
-}
-
-.cards-control {
-    width: 400px;
-    height: 150px;
-    background-color: #2b3566;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    border-radius: 15px;
-}
-
-.card-title,
-.card-value {
-    font-weight: bold;
-}
-
-.card-title {
-    font-size: 22px;
-}
-
-.card-value {
-    font-size: 20px;
-}
-
-#green{
-    color: #008000;
-}
-
-#red {
-    color: #FF0000;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
 }

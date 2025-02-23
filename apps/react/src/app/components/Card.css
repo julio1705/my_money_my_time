@@ -1,0 +1,39 @@
+
+.cards-control {
+    width: 14rem;
+    height: 6rem;
+    align-items: center;
+    background-color: #2b3566;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.cards-control:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 14px #333;
+    cursor: pointer;
+}
+
+.card-title,
+.card-value {
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 22px;
+}
+
+.card-value {
+    font-size: 20px;
+}
+
+#green{
+    color: #008000;
+}
+
+#red {
+    color: #FF0000;
+}

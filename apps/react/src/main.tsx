@@ -8,7 +8,6 @@ import Home from './app/router/Home';
 import TransactionsListing from './app/router/TransactionsListing';
 import TransactionsCreate from './app/router/TransactionsCreate';
 import TransactionsEdit from './app/router/TransactionsEdit';
-import Category from './app/router/Category';
 import ErrorPage from './app/router/ErrorPage';
 
 const router = createBrowserRouter([
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
         path: '/transactions/edit/:id',
         element: <TransactionsEdit />,
       },      
-      {
-        path: '/category',
-        element: <Category />
-      }
     ]
   },
 ])
